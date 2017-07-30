@@ -1,0 +1,491 @@
+<!-- cambios reaizados
+1. documentacion del codigo en español.
+2. Cambio de la barra de navegacion a un fija y mas visible 
+3. Menu nuevo con la etiqueta sr-only que sirve para los lectores de pantalla con la descripcion de cada elemento del menu
+4.Se cambio la letra a FiraSans especial para pantallas y mas redondeada haciendola mas legible ademas q el espaciado es mayor entre caracter
+5. Se mejoro el formulario con etiquetas nativas de html5.
+6.formularios: re agrego la etiueta required y su respectiva explicacion para los campos obligatorios
+7.formularios: Se agrego la caracteristica de minimo y maximo caracteres por campo ademas de su explicacion en los palceholders
+8.formularios: Se hizo la validacion con JS en lado del cliente, se mejoro la validacion con el siguiente patron.
+pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
+9.formularios: Se agrego las etiquetas title que dan informacion adicional a las personas solo poniendo el mouse sobre el campo
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Fundacion Colombiana del Adulto Mayor de Calle | ProVida</title>
+
+    <!-- Boton skype  -->
+
+    <script type="text/javascript" src="https://secure.skypeassets.com/i/scom/js/skype-uri.js"></script>
+
+    <!-- Libreria Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personalizado -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Fuentes Personalziadas -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet"> 
+
+
+
+</head>
+
+<body>
+
+    <!-- Menu de Navegacion -->
+    <nav class="navbar navbar-default ">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#miMenu"
+                    aria-expanded="false">
+        <span class="sr-only">Menu Expandible</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">
+                    <i class="fa fa-blind fa-lg" aria-hidden="true"></i>
+                    Fundacion ProVida</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="miMenu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li ><a href="#top">INICIO <span class="sr-only">(Este es el boton de Inicio)</span></a></li>
+                    <li><a href="#about">Sobre Nosotros<span class="sr-only">(Este es el boton que lleva a la seccion que habla sobre nosotros)</span></a></li>
+                    <li><a href="#services">Nuestros Servicios<span class="sr-only">(Este es el boton que lleva a la seccion que habla sobre nuestros servicios)</span></a></li>
+                    <li><a href="#hogar">Nuestro Hogar de Acogida<span class="sr-only">(Este es el boton que lleva a la seccion que muestra nuestro hogar de acogida)</span></a></li>
+                    <li class="active"><a href="#apoyanos">VINCULATE<span class="sr-only">(Este es el boton que lleva a la seccion que hace la invitacion de vincularte)</span></a></li>
+                    <li><a href="#frmContacto">Contacto<span class="sr-only">(Este es el boton que lleva a la seccion que llava al formulario de contacto)</span></a></li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 class="mt-5">Fundacion ProVida </h1>
+            <blockquote class="blockquote">
+                <p class="mb-0">“La caridad no busca jamás la propia comodidad.” </p>
+                <footer class="blockquote-footer">San Camilo de Lelis <cite title="Source Title">El Santo de la Caridad</cite></footer>
+            </blockquote>
+            <br>
+            <a href="#about" class="btn btn-dark btn-lg">Conoce Mas</a>
+        </div>
+    </header>
+
+    <!-- Sobre Nosotros -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2> ¿Quienes Somos?</h2>
+                    <p class="lead ">La Fundacion ProVida para el resguardo del adulto mayor está dirigida por un Consejo de Administración
+                        presidido por el Dr. XX e integrado por profesionales de distintas disciplinas médicas y sociales,
+                        comprometidos en la lucha contra el el mal trato, abandono y problematica social del adulto mayor
+                        en general pero especialmente para el adulto mayor de calle. Son también parte de la Comunidad los
+                        voluntarios, colaboradores y donantes, el staff y la dirección ejecutiva, quienes con su tiempo,
+                        energía y aportes, hacen posible sostener sus programas.<a href="#apoyanos">Haz Parte de Nuestro Equipo</a>.</p>
+                    <div class="video-responsive ">
+                        <iframe src="https://www.youtube.com/embed/i5gZoiPG6kM?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <p class="lead">“Los adultos mayores en absoluto abandono, que vivían en la calle, reciben por parte nuestra una atención
+                        integral”, precisó la funcionaria al detallar que el programa opera actualmente en Cota-Cundinamarca,
+                        y Bogota. El programa se inició en el año 2013, abarcando por primera vez la problemática del adulto
+                        mayor en calle. Busca restituir y proteger los derechos de personas excluidas históricamente y darles
+                        atención integral (mediante el Centro de Atención Integral), atención básica (a través del Servicio
+                        de Hospedería) y atención (a través de un Servicio de Restitución de Derechos).</p>
+                    <p> Placeat minus soluta voluptatibus minima laborum ut nulla, iusto, sequi omnis, dolor quis! Officiis,
+                        pariatur, officia. Deserunt soluta quia rerum consectetur enim totam aspernatur, excepturi nobis
+                        sed ipsum explicabo ratione voluptatum placeat.</p>
+
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Servicios -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2>Nuestra Misión</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Adultos Mayores de Calle</strong>
+                                </h4>
+                                <p>Tenemos convennios con varios hospitales, alcaldias locales para dar alojamiento temporal
+                                    a los Adultos Mayores Abandonados</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Trabajo Interdisciplinario</strong>
+                                </h4>
+                                <p>Contamos con grupo de profesionales Medicos, Psicologos, Abogados , enfermeros con el fin
+                                    de restituor los derechos de una dulto mayor que ingresa a nuestro centro</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Sin Animo de Lucro</strong>
+                                </h4>
+                                <p>Los adultos Mayores que estan en nuestro centro reciben su atencion Integral sin costo alguno,
+                                    nos financiamos de aportes de particulares y privados</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Hogar y Afecto</strong>
+                                </h4>
+                                <p>Desarrollamos cada dia un hogar donde nuestros abuelitos se sientan como en casa</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Llamada a la accion -->
+    <aside class="callout1 container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-primary">Ayudanos a Ayudar</h1>
+            </div>
+
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="hogar" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Nuestro Hogar de Acogida</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg" title="Hogar Fundacion ProVida" alt="Nuestro hogar" longdesc="Vista de nuestro Hogar Ubicado en Cota-Cundinamarca">
+                                <small>Hogar Fundacion ProVida</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg" title="Un Hogar con mucho verde" alt="Imagen del Campo"
+                                    longdesc="Imagen de las vacas y el area del campo de la finca">
+                                <small>Mucha zona verde para nuestros Abuelitos</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg" title="Piscina Natural" alt="Imagen de la Piscina" longdesc="La casa cuenta con piscina natural de gran tamaño">
+                                <small>Nuestro hogar cuenta con cuenca al rio creando una hermosa piscina natural</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg" title="Lago y zona de retiro" alt="Imagen del Lago" longdesc="Tenemos 2 hermosos lagos totalmente protegidos">
+                                <small>Sin dua el lugar preferido de nuestros abuelitos, un sitio de recogimiento y descanso</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Llamada a la accion -->
+    <aside id="apoyanos" class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>Deseas Unirte, Contactanos por Skype</h3>
+                    <div id="SkypeButton_Call_sistemas.ad-hoc_1" style="background-color: white; max-width:100%; margin: 50px auto;">
+                        <script type="text/javascript">
+                            Skype.ui({
+                                "name": "chat",
+                                "element": "SkypeButton_Call_sistemas.ad-hoc_1",
+                                "participants": ["sistemas.ad-hoc"],
+                                "imageSize": 24
+                            });
+                        </script>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mapa -->
+    <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7951.566361441191!2d-74.09651927506974!3d4.807251374137593!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1500228599018"></iframe>
+        <br />
+        <small>
+            <a title="Mapa de la fundacion" href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+        </small>
+    </section>
+
+    <!-- MAPA -->
+    <div id="frmContacto" class="container formulario">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Formulario de Contacto</h1>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su Nombre" required minlength="3" maxlength="12" title="Este campo es obligatorio, El nombre solo debe llevar letras, debe estar entre 3 y 12 caracteres ">
+                                <small class="form-text text-muted">*Campo Requerido</small>
+
+                            </div>
+                        </div>
+                        <div class="form-group row required ">
+                            <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su Apellido"  minlength="3" maxlength="12"  title="Este campo es obligatorio, El nombre solo debe llevar letras, debe estar entre 3 y 12 caracteres ">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="micorreo@dominio.com" required minlength="3" maxlength="50"
+                                 pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
+                                 title="El correo debe tener el siguiente formato micorreo@dominio.com no admite caracteres especiales">
+                                <small class="form-text text-muted">*Campo Requerido</small>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="telefono" class="col-sm-2 col-form-label" title="INgrese un telefono de contacto, si esta en otro pais por favor ingrese el indicativo">Telefono</label>
+                            <div class="col-sm-10">
+                                <input class="form-control" type="tel" value="(571)-000-0000000" id="telefono" minlength="3" maxlength="20">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="asunto" class="col-sm-2 col-form-label">Asunto</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" id="asunto" rows="3" placeholder="Ingrese su asunto, hasta 150 caracteres" required minlength="3" maxlength="150" title="Ingrese el asunto de contacto para brindarle una mejor atencion"></textarea>
+                                <small class="form-text text-muted">*Campo Requerido</small>
+                            </div>
+                        </div>
+
+                        <fieldset class="form-group row">
+                            <legend class="col-form-legend col-sm-2">Motivo</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>Deseo Apoyarlos Economicamente</label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"> Tengo Donaciones de Alimentos o Medicamentos que deseo aportar</label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" > Deseo Apoyar con mi Tiempo</label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4" >
+            Otros
+          </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row ">
+                            <label class="col-sm-2 text-danger">IMPORTANTE</label>
+                            <div class="col-sm-10">
+                                <div class="form-check has-danger">
+                                    <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" required title="Este campo es obligatorio, pide consentimiento de los terminos"> Comprendo que son una fundacion sin animo de lucro, registrada y auditada. Y deseo Colaborar.
+          </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row divImagen">
+                            <label class="col-sm-2 text-primary">ACESSIBILIDAD</label>
+                            <div class="col-sm-10">
+                                <img src="img/noCaptcha.svg" alt="No es necesario Captcha" longdesc="Este sitio esta optimizado para la lectura de personas con discapacidad no necesita solicionar el captcha para enviar el formulario">
+                            </div>
+                        </div>
+                        <!-- captcha -->
+                        <div class="form-group row">
+                            <label class="col-sm-2"></label>
+                            <div class="col-sm-10">
+                                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Finaliza formulario -->
+    <hr>
+    <footer>
+        <div class="row ">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Fundacion Provida</strong>
+                </h4>
+                <p>Km 1.5 Vereda Pueblo-Viejo
+                    <br>Cota, Cundinamarca COL 20017</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">contacto@providacol.com.co</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                    </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Fundacion ProVida 2017</p>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- Finaliza Footer -->
+
+    <!-- Libreria jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Js para libreria Bootstrap  -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Mis Scripts -->
+    <script>
+        // Efecto Scroll
+        $(function () {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') ||
+                    location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top Boton para subir al inicio
+        var fixed = false;
+        $(document).scroll(function () {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function () {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function () {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        // Disable Google Maps scrolling
+        var onMapMouseleaveHandler = function (event) {
+            var that = $(this);
+            that.on('click', onMapClickHandler);
+            that.off('mouseleave', onMapMouseleaveHandler);
+            that.find('iframe').css("pointer-events", "none");
+        }
+        var onMapClickHandler = function (event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Habilita Zoom de google Maps
+        $('.map').on('click', onMapClickHandler);
+    </script>
+
+</body>
+
+</html>
