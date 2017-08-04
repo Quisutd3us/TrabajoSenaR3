@@ -183,10 +183,16 @@ ul li a{
     
 }
 
-.callout1 h1{
+.callout1 h2{
     padding: 2rem;
+    border-radius: 10px;;
     text-shadow: 0.3rem 0.3rem whitesmoke;
-    background-color: white;
+    background-color: whitesmoke;
+}
+
+.callout1 h2:hover{
+    background-color: skyblue;
+    color: #3c3c3c;
 }
 
 
