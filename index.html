@@ -11,16 +11,13 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
 9.formularios: Se agrego las etiquetas title que dan informacion adicional a las personas solo poniendo el mouse sobre el campo
 -->
 
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Fundacion Colombiana del Adulto Mayor de Calle | ProVida</title>
 
@@ -37,7 +34,7 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
     <!-- Fuentes Personalziadas -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
 
 
 
@@ -50,8 +47,7 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#miMenu"
-                    aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#miMenu" aria-expanded="false">
         <span class="sr-only">Menu Expandible</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -65,13 +61,13 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="miMenu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="#top">INICIO <span class="sr-only">(Este es el boton de Inicio)</span></a></li>
+                    <li><a href="#top">INICIO <span class="sr-only">(Este es el boton de Inicio)</span></a></li>
                     <li><a href="#about">Sobre Nosotros<span class="sr-only">(Este es el boton que lleva a la seccion que habla sobre nosotros)</span></a></li>
                     <li><a href="#services">Nuestros Servicios<span class="sr-only">(Este es el boton que lleva a la seccion que habla sobre nuestros servicios)</span></a></li>
                     <li><a href="#hogar">Nuestro Hogar de Acogida<span class="sr-only">(Este es el boton que lleva a la seccion que muestra nuestro hogar de acogida)</span></a></li>
                     <li class="active"><a href="#apoyanos">VINCULATE<span class="sr-only">(Este es el boton que lleva a la seccion que hace la invitacion de vincularte)</span></a></li>
                     <li><a href="#frmContacto">Contacto<span class="sr-only">(Este es el boton que lleva a la seccion que llava al formulario de contacto)</span></a></li>
-                    
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -215,7 +211,7 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg" title="Hogar Fundacion ProVida" alt="Nuestro hogar" longdesc="Vista%20de%20nuestro%20Hogar%20Ubicado%20en%20Cota-Cundinamarca">
-                              <small>Hogar Fundacion ProVida</small>
+                                <small>Hogar Fundacion ProVida</small>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -294,7 +290,8 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
                         <div class="form-group row">
                             <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su Nombre" required minlength="3" maxlength="12" title="Este campo es obligatorio, El nombre solo debe llevar letras, debe estar entre 3 y 12 caracteres ">
+                                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su Nombre" required minlength="3" maxlength="12"
+                                    title="Este campo es obligatorio, El nombre solo debe llevar letras, debe estar entre 3 y 12 caracteres ">
                                 <small class="form-text text-muted">*Campo Requerido</small>
 
                             </div>
@@ -302,15 +299,15 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
                         <div class="form-group row required ">
                             <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su Apellido"  minlength="3" maxlength="12"  title="Este campo es obligatorio, El nombre solo debe llevar letras, debe estar entre 3 y 12 caracteres ">
+                                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su Apellido" minlength="3" maxlength="12" title="Este campo es obligatorio, El nombre solo debe llevar letras, debe estar entre 3 y 12 caracteres ">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control" id="email" placeholder="micorreo@dominio.com" required minlength="3" maxlength="50"
-                                 pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
-                                 title="El correo debe tener el siguiente formato micorreo@dominio.com no admite caracteres especiales">
+                                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$"
+                                    title="El correo debe tener el siguiente formato micorreo@dominio.com no admite caracteres especiales">
                                 <small class="form-text text-muted">*Campo Requerido</small>
                             </div>
                         </div>
@@ -325,7 +322,8 @@ pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|
                         <div class="form-group row">
                             <label for="asunto" class="col-sm-2 col-form-label">Asunto</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" id="asunto" rows="3" placeholder="Ingrese su asunto, hasta 150 caracteres" required minlength="3" maxlength="150" title="Ingrese el asunto de contacto para brindarle una mejor atencion"></textarea>
+                                <textarea class="form-control" id="asunto" rows="3" placeholder="Ingrese su asunto, hasta 150 caracteres" required minlength="3"
+                                    maxlength="150" title="Ingrese el asunto de contacto para brindarle una mejor atencion"></textarea>
                                 <small class="form-text text-muted">*Campo Requerido</small>
                             </div>
                         </div>
